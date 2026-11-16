@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarah Tiefenberg | Raumausstattermeisterin in Köln-Ehrenfeld</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+        /* Feine Stoff-Webstruktur für das Live-Studio */
+        .fabric-weave {
+            background-image:
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.08) 0px, rgba(255,255,255,0.08) 1px, transparent 1px, transparent 4px),
+                repeating-linear-gradient(90deg, rgba(0,0,0,0.06) 0px, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 4px);
+        }
+        .curtain-folds {
+            background-image: repeating-linear-gradient(
+                90deg,
+                rgba(0, 0, 0, 0.14) 0%,
+                rgba(255, 255, 255, 0.12) 10%,
+                rgba(0, 0, 0, 0.16) 20%
+            );
+            transition: width 0.6s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.4s ease;
+        }
+    </style>
+</head>
+<body class="bg-[#FAF8F5] text-stone-800 antialiased selection:bg-[#8C4A32] selection:text-white">
+
+    <!-- Top-Info-Leiste mit Google-Maps-Öffnungszeiten & Termin-Hinweis -->
+    <div class="bg-[#2C2520] text-stone-200 text-xs font-medium py-2 px-4 text-center">
+        ✨ Meisteratelier Ehrenfeldgürtel 159, 50823 Köln · Mo–Fr 08:00–14:30 Uhr (Termine nach Vereinbarung) · Tel.: 0221 20431432
+    </div>
+
+    <!-- Header (ersetzt den alten MYLOGO-Platzhalter durch ein edles Atelier-Signet) -->
+    <header class="sticky top-0 z-40 bg-[#FAF8F5]/95 backdrop-blur-md border-b border-stone-200/80">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex items-center justify-between">
+            <div class="flex items-center gap-3.5">
+                <div class="w-11 h-11 rounded-full bg-[#8C4A32] text-[#FAF8F5] flex items-center justify-center font-serif-display text-xl font-bold tracking-wider shadow-xs shrink-0">
+                    ST
+                </div>
+                <div>
+                    <span class="font-serif-display text-xl md:text-2xl font-bold tracking-tight text-stone-900 block leading-none">
+                        Sarah Tiefenberg
+                    </span>
+                    <span class="text-[11px] uppercase tracking-widest text-[#8C4A32] font-semibold">
+                        Raumausstattermeisterin · Köln-Ehrenfeld
+                    </span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-stone-700">
+                <a href="#studio" class="hover:text-[#8C4A32] transition">Stoff-Studio</a>
+                <a href="#leistungen" class="hover:text-[#8C4A32] transition">Leistungen &amp; Atelier</a>
+                <a href="#rechner" class="hover:text-[#8C4A32] transition">Projekt-Kalkulator</a>
+                <a href="#kontakt" class="hover:text-[#8C4A32] transition">Kontakt &amp; Zeiten</a>
+            </nav>
+
+            <a href="#rechner" class="bg-[#8C4A32] hover:bg-[#703824] text-white font-semibold text-xs md:text-sm px-4 py-2.5 rounded-xl transition shadow-xs">
+                Termin &amp; Preis
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section mit interaktivem Live-Stoff- & Vorhang-Studio -->
+    <section id="studio" class="pt-10 pb-16 md:pt-16 md:pb-20 px-4 bg-gradient-to-b from-[#F3EDE4] via-[#FAF8F5] to-[#FAF8F5] border-b border-stone-200/80">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            
+            <!-- Linke Spalte: Story & Google-Bewertungs-Badge -->
+            <div class="lg:col-span-6 text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 bg-white border border-stone-200 rounded-full px-4 py-1.5 text-xs text-stone-700 font-semibold shadow-2xs mb-5">
+                    <span class="text-amber-500">★★★★★</span>
+                    <span>5,0 Google-Bewertung (27 Rezensionen) · Meisterbetrieb</span>
+                </div>
+                <h1 class="font-serif-display text-4xl md:text-6xl font-bold tracking-tight text-stone-900 leading-[1.08] mb-5">
+                    Tradition trifft <span class="italic text-[#8C4A32]">Kreativität</span>
+                </h1>
+                <p class="text-stone-600 text-base md:text-lg mb-7 leading-relaxed">
+                    Individuell, stilsicher und handwerklich meisterlich: In unserem Ladenlokal mit eigenem Nähatelier am <strong>Ehrenfeldgürtel 159</strong> fertigen wir maßgeschneiderte Vorhänge, Sicht- und Sonnenschutz sowie hochwertige Neubezüge für Ihre Lieblingsmöbel.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                    <a href="#rechner" class="bg-[#8C4A32] hover:bg-[#703824] text-white font-semibold px-7 py-4 rounded-xl text-sm md:text-base transition shadow-md text-center">
+                        Projekt kalkulieren &amp; Termin anfragen →
+                    </a>
+                    <a href="tel:022120431432" class="bg-white hover:bg-stone-100 border border-stone-300 text-stone-800 font-semibold px-6 py-4 rounded-xl text-sm md:text-base transition text-center">
+                        📞 0221 20431432
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rechte Spalte: Kreatives Interaktives Stoff- & Vorhang-Studio -->
+            <div class="lg:col-span-6">
+                <div class="bg-white p-4 rounded-3xl shadow-xl border border-stone-200/90">
+                    <!-- Illustrierte Raum-Szene -->
+                    <div id="roomScene" class="relative h-72 sm:h-80 rounded-2xl overflow-hidden border border-stone-200 bg-gradient-to-b from-[#EDE6DC] to-[#DFD5C7] transition-all duration-500">
+                        
+                        <!-- Fenster im Hintergrund -->
+                        <div class="absolute top-5 left-1/2 -translate-x-1/2 w-56 sm:w-64 h-48 bg-gradient-to-b from-sky-100 via-amber-50 to-stone-100 border-4 border-white shadow-inner rounded-t-sm overflow-hidden">
+                            <!-- Sonnenschein-Lichtkegel -->
+                            <div id="sunGlow" class="absolute inset-0 bg-amber-200/35 transition-opacity duration-500"></div>
+                            <!-- Fenstersprossen -->
+                            <div class="absolute inset-0 grid grid-cols-2 grid-rows-2">
+                                <div class="border-r-2 border-b-2 border-white"></div>
+                                <div class="border-b-2 border-white"></div>
+                                <div class="border-r-2 border-white"></div>
+                                <div></div>
+                            </div>
+                        </div>
+
+                        <!-- Vorhangstange -->
+                        <div class="absolute top-3.5 left-1/2 -translate-x-1/2 w-72 sm:w-80 h-1.5 bg-stone-700 rounded-full shadow-xs z-20"></div>
+
+                        <!-- Linker Vorhang (aus dem eigenen Nähatelier) -->
+                        <div id="curtainLeft" class="curtain-folds fabric-weave absolute top-4 left-[10%] sm:left-[12%] h-56 rounded-b-xs shadow-md z-10" style="width: 18%; background-color: #8C4A32;"></div>
+
+                        <!-- Rechter Vorhang (aus dem eigenen Nähatelier) -->
+                        <div id="curtainRight" class="curtain-folds fabric-weave absolute top-4 right-[10%] sm:right-[12%] h-56 rounded-b-xs shadow-md z-10" style="width: 18%; background-color: #8C4A32;"></div>
+
+                        <!-- Holzboden -->
+                        <div class="absolute bottom-0 inset-x-0 h-16 bg-gradient-to-b from-[#C7B299] to-[#B0987E] border-t border-stone-400/30"></div>
+
+                        <!-- Designer-Polstersessel (Vordergrund) -->
+                        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-44 sm:w-48 flex flex-col items-center z-20">
+                            <!-- Rückenlehne -->
+                            <div id="chairBack" class="fabric-weave w-36 sm:w-40 h-20 rounded-t-3xl shadow-md border border-black/10 transition-colors duration-400" style="background-color: #8C4A32;"></div>
+                            <!-- Sitzfläche & Armlehnen -->
+                            <div class="relative w-full flex items-end justify-between -mt-4">
+                                <div id="chairArmL" class="fabric-weave w-7 h-14 rounded-t-xl rounded-bl-lg shadow-sm border border-black/10 transition-colors duration-400" style="background-color: #7A3E29;"></div>
+                                <div id="chairSeat" class="fabric-weave flex-1 h-10 rounded-t-lg shadow-inner border-t border-white/20 transition-colors duration-400" style="background-color: #9A543B;"></div>
+                                <div id="chairArmR" class="fabric-weave w-7 h-14 rounded-t-xl rounded-br-lg shadow-sm border border-black/10 transition-colors duration-400" style="background-color: #7A3E29;"></div>
+                            </div>
+                            <!-- Holzfüße -->
+                            <div class="w-32 flex justify-between px-2">
+                                <div class="w-2 h-4 bg-stone-800 rounded-b-xs -rotate-6"></div>
+                                <div class="w-2 h-4 bg-stone-800 rounded-b-xs rotate-6"></div>
+                            </div>
+                        </div>
+
+                        <!-- Live-Info-Badge oben im Raum -->
+                        <div class="absolute bottom-2 right-3 z-30">
+                            <span id="fabricBadge" class="bg-white/95 backdrop-blur-xs text-stone-800 text-[11px] font-semibold px-3 py-1 rounded-full shadow-xs border border-stone-200">
+                                Stoff: Bouclé Terrakotta
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Stoffmuster-Auswahl & Vorhang-Schalter -->
+                    <div class="pt-4 px-1 space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <span class="text-xs font-semibold text-stone-600">Stoffmuster live testen:</span>
+                            <button type="button" id="curtainToggleBtn" onclick="toggleCurtains()" class="text-xs font-semibold text-[#8C4A32] bg-[#FAF8F5] hover:bg-stone-100 border border-stone-200 px-3 py-1 rounded-lg transition">
+                                🪟 Sichtschutz zuziehen
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-5 gap-2">
+                            <button type="button" onclick="applyFabric('Bouclé Terrakotta', '#8C4A32', '#7A3E29', '#9A543B', this)" class="swatch-btn ring-2 ring-[#8C4A32] ring-offset-2 rounded-xl p-1.5 border border-stone-200 bg-stone-50 text-center transition">
+                                <span class="block w-full h-6 rounded-lg fabric-weave" style="background-color: #8C4A32;"></span>
+                                <span class="block text-[10px] font-semibold text-stone-700 mt-1 truncate">Terrakotta</span>
+                            </button>
+                            <button type="button" onclick="applyFabric('Samt Smaragdgrün', '#234E43', '#1B3D34', '#2D6153', this)" class="swatch-btn rounded-xl p-1.5 border border-stone-200 bg-stone-50 text-center transition">
+                                <span class="block w-full h-6 rounded-lg fabric-weave" style="background-color: #234E43;"></span>
+                                <span class="block text-[10px] font-semibold text-stone-700 mt-1 truncate">Smaragd</span>
+                            </button>
+                            <button type="button" onclick="applyFabric('Leinen Natur-Beige', '#B8A68E', '#A39179', '#C7B69F', this)" class="swatch-btn rounded-xl p-1.5 border border-stone-200 bg-stone-50 text-center transition">
+                                <span class="block w-full h-6 rounded-lg fabric-weave" style="background-color: #B8A68E;"></span>
+                                <span class="block text-[10px] font-semibold text-stone-700 mt-1 truncate">Leinen</span>
+                            </button>
+                            <button type="button" onclick="applyFabric('Velours Nachtblau', '#253B56', '#1C2E44', '#314D70', this)" class="swatch-btn rounded-xl p-1.5 border border-stone-200 bg-stone-50 text-center transition">
+                                <span class="block w-full h-6 rounded-lg fabric-weave" style="background-color: #253B56;"></span>
+                                <span class="block text-[10px] font-semibold text-stone-700 mt-1 truncate">Nachtblau</span>
+                            </button>
+                            <button type="button" onclick="applyFabric('Webstoff Salbeigrün', '#6B7F6E', '#58695B', '#7D9280', this)" class="swatch-btn rounded-xl p-1.5 border border-stone-200 bg-stone-50 text-center transition">
+                                <span class="block w-full h-6 rounded-lg fabric-weave" style="background-color: #6B7F6E;"></span>
+                                <span class="block text-[10px] font-semibold text-stone-700 mt-1 truncate">Salbei</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Leistungen & Ladenlokal am Ehrenfeldgürtel -->
+    <section id="leistungen" class="py-16 px-4 bg-white border-b border-stone-200/80">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-[#8C4A32] text-xs font-bold uppercase tracking-widest">Handwerk &amp; Maßanfertigung</span>
+                <h2 class="font-serif-display text-3xl md:text-4xl font-bold text-stone-900 mt-1">
+                    Auf Sie abgestimmte Wohnlösungen
+                </h2>
+                <p class="text-stone-600 text-sm mt-2 leading-relaxed">
+                    Gemeinsam erarbeiten wir Ihre Wünsche und Gewohnheiten – in unserem Ladenlokal am Ehrenfeldgürtel 159 oder direkt bei Ihnen zu Hause in Köln.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="bg-[#FAF8F5] border border-stone-200/80 p-6 rounded-2xl">
+                    <div class="text-2xl mb-3">🪡</div>
+                    <h3 class="font-bold text-stone-900 mb-2">Maßgefertigte Vorhänge</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">In unserem eigenen Nähatelier fertigen wir Dekoschals, Stores und textile Raumteiler exakt nach Maß.</p>
+                </div>
+                <div class="bg-[#FAF8F5] border border-stone-200/80 p-6 rounded-2xl">
+                    <div class="text-2xl mb-3">🛋️</div>
+                    <h3 class="font-bold text-stone-900 mb-2">Meister-Polsterei</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Fachgerechtes Aufpolstern und Neubeziehen von Sesseln, Sofas, Stühlen und Erbstücken in Ihrer Wunsch-Textur.</p>
+                </div>
+                <div class="bg-[#FAF8F5] border border-stone-200/80 p-6 rounded-2xl">
+                    <div class="text-2xl mb-3">☀️</div>
+                    <h3 class="font-bold text-stone-900 mb-2">Sicht- &amp; Sonnenschutz</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Maßgeschneiderte Plissees, Rollos, Jalousien und Lamellenvorhänge für angenehmes Licht und Privatsphäre.</p>
+                </div>
+                <div class="bg-[#FAF8F5] border border-stone-200/80 p-6 rounded-2xl">
+                    <div class="text-2xl mb-3">🎨</div>
+                    <h3 class="font-bold text-stone-900 mb-2">Raumgestaltung</h3>
+                    <p class="text-xs text-stone-600 leading-relaxed">Stilsichere Farb-, Stoff- und Materialberatung, damit Textilien, Möbel und Licht perfekt harmonieren.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interaktiver 30-Sekunden-Kalkulator & Terminvereinbarung -->
+    <section id="rechner" class="py-16 px-4 bg-[#FAF8F5]">
+        <div class="max-w-2xl mx-auto">
+            <div class="text-center mb-8">
+                <span class="text-[#8C4A32] text-xs font-bold uppercase tracking-widest">Unverbindliche Ersteinschätzung</span>
+                <h2 class="font-serif-display text-3xl md:text-4xl font-bold text-stone-900 mt-1">Ihr Projekt kalkulieren</h2>
+                <p class="text-stone-600 text-sm mt-2">Wählen Sie Ihr Vorhaben für einen ersten Richtwert und sichern Sie sich Ihren Beratungstermin.</p>
+            </div>
+
+            <div class="bg-white border border-stone-200 rounded-2xl p-6 md:p-8 shadow-lg">
+                <!-- Progress Bar -->
+                <div class="mb-6">
+                    <div class="flex justify-between text-xs text-stone-500 font-medium mb-2">
+                        <span id="stepLabel">Schritt 1 von 3</span>
+                        <span id="stepPercent">33%</span>
+                    </div>
+                    <div class="w-full bg-stone-100 h-2 rounded-full overflow-hidden">
+                        <div id="progressBar" class="bg-[#8C4A32] h-full transition-all duration-300" style="width: 33%"></div>
+                    </div>
+                </div>
+
+                <!-- Schritt 1: Leistung -->
+                <div id="step1" class="step-panel space-y-3">
+                    <h3 class="text-base md:text-lg font-bold text-stone-900 mb-3">1. Wobei darf ich Sie unterstützen?</h3>
+                    
+                    <button type="button" onclick="selectService('Maßgefertigte Vorhänge / Raumteiler (Nähatelier)', 290)" class="w-full text-left p-4 rounded-xl border border-stone-200 bg-[#FAF8F5] hover:border-[#8C4A32] hover:bg-white transition flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-stone-900">Maßgefertigte Vorhänge &amp; Raumteiler</div>
+                            <div class="text-xs text-stone-500">Individuelle Anfertigung aus unserem eigenen Nähatelier</div>
+                        </div>
+                        <span class="text-[#8C4A32] font-bold text-xs md:text-sm shrink-0 ml-2">ab 290 €</span>
+                    </button>
+
+                    <button type="button" onclick="selectService('Polstermöbel neu polstern & beziehen', 480)" class="w-full text-left p-4 rounded-xl border border-stone-200 bg-[#FAF8F5] hover:border-[#8C4A32] hover:bg-white transition flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-stone-900">Polstermöbel neu polstern &amp; beziehen</div>
+                            <div class="text-xs text-stone-500">Sessel, Stühle, Sofas &amp; Eckbänke meisterlich aufgearbeitet</div>
+                        </div>
+                        <span class="text-[#8C4A32] font-bold text-xs md:text-sm shrink-0 ml-2">ab 480 €</span>
+                    </button>
+
+                    <button type="button" onclick="selectService('Sicht- & Sonnenschutz nach Maß', 180)" class="w-full text-left p-4 rounded-xl border border-stone-200 bg-[#FAF8F5] hover:border-[#8C4A32] hover:bg-white transition flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-stone-900">Sicht- &amp; Sonnenschutz (Plissees, Rollos, Jalousien)</div>
+                            <div class="text-xs text-stone-500">Aufmaß, Beratung &amp; passgenaue Montage am Fenster</div>
+                        </div>
+                        <span class="text-[#8C4A32] font-bold text-xs md:text-sm shrink-0 ml-2">ab 180 €</span>
+                    </button>
+
+                    <button type="button" onclick="selectService('Ganzheitliche Raumgestaltung & Stoffberatung', 250)" class="w-full text-left p-4 rounded-xl border border-stone-200 bg-[#FAF8F5] hover:border-[#8C4A32] hover:bg-white transition flex justify-between items-center">
+                        <div>
+                            <div class="font-bold text-stone-900">Raumgestaltung &amp; individuelles Farbkonzept</div>
+                            <div class="text-xs text-stone-500">Abstimmung von Textilien, Farben &amp; Möbeln für Ihr Zuhause</div>
+                        </div>
+                        <span class="text-[#8C4A32] font-bold text-xs md:text-sm shrink-0 ml-2">ab 250 €</span>
+                    </button>
+                </div>
+
+                <!-- Schritt 2: Umfang -->
+                <div id="step2" class="step-panel hidden space-y-4">
+                    <h3 class="text-base md:text-lg font-bold text-stone-900">2. Wie groß ist der geplante Umfang?</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                        <button type="button" onclick="selectSize('Einzelstück / 1–2 Fenster', 1)" class="p-4 rounded-xl border border-stone-200 bg-[#FAF8F5] hover:border-[#8C4A32] hover:bg-white transition text-center">
+                            <div class="font-bold text-stone-900 text-sm">Kompakt</div>
+                            <div class="text-xs text-stone-500 mt-1">1 Sessel / 1–2 Fenster</div>
+                        </button>
+                        <button type="button" onclick="selectSize('Wohnbereich / Mehrere Fenster & Möbel', 2.1)" class="p-4 rounded-xl border border-stone-200 bg-[#FAF8F5] hover:border-[#8C4A32] hover:bg-white transition text-center">
+                            <div class="font-bold text-stone-900 text-sm">Wohnbereich</div>
+                            <div class="text-xs text-stone-500 mt-1">Sofa / 3–5 Fenster</div>
+                        </button>
+                        <button type="button" onclick="selectSize('Komplette Wohnung / Hausprojekt', 3.4)" class="p-4 rounded-xl border border-stone-200 bg-[#FAF8F5] hover:border-[#8C4A32] hover:bg-white transition text-center">
+                            <div class="font-bold text-stone-900 text-sm">Gesamtkonzept</div>
+                            <div class="text-xs text-stone-500 mt-1">Mehrere Räume</div>
+                        </button>
+                    </div>
+                    <button type="button" onclick="goStep(1)" class="text-xs text-stone-500 hover:text-stone-900 font-medium pt-2">← Zurück</button>
+                </div>
+
+                <!-- Schritt 3: Ergebnis & Termin-Anfrage -->
+                <div id="step3" class="step-panel hidden space-y-5">
+                    <div class="bg-[#FAF8F5] border border-[#8C4A32]/30 rounded-xl p-5 text-center">
+                        <span class="text-xs text-[#8C4A32] uppercase tracking-wider font-bold">Unverbindliche Richtwert-Schätzung (inkl. Beratung)</span>
+                        <div id="priceRange" class="text-2xl md:text-3xl font-extrabold text-stone-900 my-2">610 € – 790 €</div>
+                        <p id="summaryText" class="text-xs text-stone-600"></p>
+                    </div>
+
+                    <form id="leadForm" class="space-y-3">
+                        <input type="hidden" name="access_key" value="DEIN_WEB3FORMS_KEY">
+                        <input type="hidden" name="subject" value="Neue Beratungsanfrage - Raumausstattermeisterin Sarah Tiefenberg">
+                        <input type="hidden" id="hiddenDetails" name="kalkulation">
+
+                        <div>
+                            <label class="block text-xs text-stone-600 font-semibold mb-1">Ihr Name *</label>
+                            <input type="text" name="name" required placeholder="Max Mustermann" class="w-full bg-[#FAF8F5] border border-stone-300 rounded-lg px-4 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8C4A32] focus:bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-stone-600 font-semibold mb-1">Telefonnummer oder E-Mail für Terminabsprache *</label>
+                            <input type="text" name="contact" required placeholder="0221 / 017... oder E-Mail" class="w-full bg-[#FAF8F5] border border-stone-300 rounded-lg px-4 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8C4A32] focus:bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-xs text-stone-600 font-semibold mb-1">Wunschzeit (Mo–Fr 08:00–14:30 Uhr oder nach Absprache)</label>
+                            <input type="text" name="appointment" placeholder="z.B. Donnerstag vormittags im Ladenlokal" class="w-full bg-[#FAF8F5] border border-stone-300 rounded-lg px-4 py-2.5 text-sm text-stone-900 focus:outline-none focus:border-[#8C4A32] focus:bg-white">
+                        </div>
+
+                        <button type="submit" id="submitBtn" class="w-full bg-[#8C4A32] hover:bg-[#703824] text-white font-bold py-3.5 rounded-lg text-sm transition shadow-sm">
+                            Unverbindlichen Beratungstermin anfragen
+                        </button>
+                    </form>
+
+                    <div id="successBox" class="hidden bg-emerald-50 border border-emerald-300 text-emerald-900 p-4 rounded-xl text-sm text-center">
+                        ✅ Vielen Dank! Ihre Anfrage wurde an <strong>Sarah Tiefenberg</strong> übermittelt. Ich freue mich darauf, Sie kennenzulernen!
+                    </div>
+
+                    <button type="button" onclick="goStep(1)" class="text-xs text-stone-500 hover:text-stone-900 block mx-auto font-medium">Kalkulator neu starten</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt, Ladenlokal & Öffnungszeiten aus Google Maps -->
+    <footer id="kontakt" class="py-14 px-4 bg-[#2C2520] text-stone-200 text-sm">
+        <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+            <div>
+                <span class="text-[#D99B82] text-xs font-bold uppercase tracking-widest">Ladenlokal &amp; Nähatelier in Köln</span>
+                <h3 class="font-serif-display text-3xl font-bold text-white mt-1 mb-3">Raumausstattermeisterin Sarah Tiefenberg</h3>
+                <p class="text-stone-300 text-sm leading-relaxed mb-5">
+                    Lassen Sie sich in unserem Ladenlokal am Ehrenfeldgürtel von unserer großen Stoffauswahl inspirieren. Bitte vereinbaren Sie vorab einen Termin, damit ich mir ausreichend Zeit für Ihr Projekt nehmen kann.
+                </p>
+                <ul class="space-y-2 text-sm text-stone-200">
+                    <li>📍 <strong>Adresse:</strong> Ehrenfeldgürtel 159, 50823 Köln-Ehrenfeld</li>
+                    <li>🕒 <strong>Öffnungszeiten:</strong> Mo – Fr: 08:00 – 14:30 Uhr (Sa &amp; So geschlossen)</li>
+                    <li>📅 <strong>Hinweis:</strong> Beratung nach Terminvereinbarung</li>
+                    <li>📞 <strong>Telefon:</strong> <a href="tel:022120431432" class="text-[#E6B19C] font-semibold hover:underline">0221 20431432</a></li>
+                    <li>✉️ <strong>E-Mail:</strong> <a href="mailto:mail@raumausstattermeisterin.de" class="text-[#E6B19C] font-semibold hover:underline">mail@raumausstattermeisterin.de</a></li>
+                </ul>
+            </div>
+
+            <div class="bg-white/5 border border-white/10 p-7 rounded-2xl">
+                <div class="flex items-center gap-2 text-amber-400 text-sm font-bold mb-2">
+                    <span>★★★★★</span>
+                    <span class="text-white">5,0 / 5 auf Google (27 Bewertungen)</span>
+                </div>
+                <p class="text-xs text-stone-300 leading-relaxed mb-5">
+                    Inhabergeführter Meisterbetrieb in Köln-Ehrenfeld. Ich freue mich darauf, Sie persönlich kennenzulernen und Ihr Zuhause mit handwerklicher Präzision zu gestalten.
+                </p>
+                <a href="tel:022120431432" class="block w-full text-center bg-[#8C4A32] hover:bg-[#A3583D] text-white font-bold py-3.5 rounded-xl text-sm transition">
+                    Jetzt anrufen &amp; Termin vereinbaren: 0221 20431432
+                </a>
+            </div>
+        </div>
+        <div class="max-w-5xl mx-auto mt-10 pt-6 border-t border-white/10 text-center text-xs text-stone-400">
+            © 2026 Raumausstattermeisterin Sarah Tiefenberg · Ehrenfeldgürtel 159 · 50823 Köln
+        </div>
+    </footer>
+
+    <script>
+        /* --- 1. Live-Stoff- & Vorhang-Studio --- */
+        let selectedFabric = 'Bouclé Terrakotta';
+        let curtainsClosed = false;
+
+        function applyFabric(name, mainColor, darkColor, lightColor, btnElement) {
+            selectedFabric = name;
+            document.getElementById('curtainLeft').style.backgroundColor = mainColor;
+            document.getElementById('curtainRight').style.backgroundColor = mainColor;
+            document.getElementById('chairBack').style.backgroundColor = mainColor;
+            document.getElementById('chairArmL').style.backgroundColor = darkColor;
+            document.getElementById('chairArmR').style.backgroundColor = darkColor;
+            document.getElementById('chairSeat').style.backgroundColor = lightColor;
+            document.getElementById('fabricBadge').innerText = `Stoff: ${name}`;
+
+            document.querySelectorAll('.swatch-btn').forEach(btn => {
+                btn.classList.remove('ring-2', 'ring-[#8C4A32]', 'ring-offset-2');
+            });
+            btnElement.classList.add('ring-2', 'ring-[#8C4A32]', 'ring-offset-2');
+        }
+
+        function toggleCurtains() {
+            curtainsClosed = !curtainsClosed;
+            const left = document.getElementById('curtainLeft');
+            const right = document.getElementById('curtainRight');
+            const sun = document.getElementById('sunGlow');
+            const btn = document.getElementById('curtainToggleBtn');
+
+            if (curtainsClosed) {
+                left.style.width = '40%';
+                right.style.width = '40%';
+                sun.style.opacity = '0.05';
+                btn.innerText = '☀️ Vorhänge öffnen';
+            } else {
+                left.style.width = '18%';
+                right.style.width = '18%';
+                sun.style.opacity = '1';
+                btn.innerText = '🪟 Sichtschutz zuziehen';
+            }
+        }
+
+        /* --- 2. 30-Sekunden-Projektkalkulator --- */
+        let state = { serviceName: '', basePrice: 0, sizeLabel: '', multiplier: 1 };
+
+        function goStep(step) {
+            document.querySelectorAll('.step-panel').forEach(el => el.classList.add('hidden'));
+            document.getElementById('step' + step).classList.remove('hidden');
+            let pct = step === 1 ? '33%' : (step === 2 ? '66%' : '100%');
+            document.getElementById('stepLabel').innerText = `Schritt ${step} von 3`;
+            document.getElementById('stepPercent').innerText = pct;
+            document.getElementById('progressBar').style.width = pct;
+        }
+
+        function selectService(name, price) {
+            state.serviceName = name;
+            state.basePrice = price;
+            goStep(2);
+        }
+
+        function selectSize(label, multiplier) {
+            state.sizeLabel = label;
+            state.multiplier = multiplier;
+
+            const totalMin = Math.round(state.basePrice * state.multiplier);
+            const totalMax = Math.round(totalMin * 1.28);
+
+            document.getElementById('priceRange').innerText = `${totalMin.toLocaleString()} € – ${totalMax.toLocaleString()} €`;
+            const summary = `${state.serviceName} · ${state.sizeLabel} · Farbwelt: ${selectedFabric}`;
+            document.getElementById('summaryText').innerText = summary;
+            document.getElementById('hiddenDetails').value = `${summary} | Schätzung: ${totalMin}€ - ${totalMax}€`;
+
+            goStep(3);
+        }
+
+        document.getElementById('leadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = document.getElementById('submitBtn');
+            btn.innerText = 'Wird gesendet...';
+            btn.disabled = true;
+
+            const formData = new FormData(this);
+            const object = Object.fromEntries(formData);
+
+            try {
+                await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify(object)
+                });
+            } catch (error) {}
+
+            this.classList.add('hidden');
+            document.getElementById('successBox').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
